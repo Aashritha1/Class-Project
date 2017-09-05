@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% if mlist %}
+<ul>
+    {% for each in mlist %}
+    <li>({{each.student__name}},{{each.total}})</li>
+    {% endfor %}
+</ul>
+{% else %}
+<h3>NO list</h3>
+{% endif %}
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+</head>
+<body>
+<!--<script src="{% static "js/jquery.js" %}"></script>-->
+<script src="{% static 'js/ajax.js' %}"></script>
+{% if collegelist %}
+<ul>
+    {% for each in collegelist %}
+    <li><a href="{% url 'onlineapp:marksinfo' each.id %}">({{each.name}})</a></li>
+    {% endfor %}
+</ul>
+{% else %}
+<h3>NO list</h3>
+{% endif %}
+</body>
+</html>
